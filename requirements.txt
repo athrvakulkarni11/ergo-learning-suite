@@ -1,0 +1,7 @@
+streamlit
+langchain
+PyMuPDF  # for loading PDF files
+hashlib  # for hashing PDF contents
+chroma-db  # for Chroma vector storage
+nomic-embed # for embedding text with Ollama Embeddings
+ollama  # Ollama framework for language model use
