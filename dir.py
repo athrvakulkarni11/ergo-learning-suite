@@ -29,8 +29,8 @@ def load_pdf_data(pdf_file_paths):
     for pdf_file_path in pdf_file_paths:
         print(f"Attempting to load file: {pdf_file_path}")
         try:
-            if not os.path.exists(pdf_file_path):
-                print(f"File does not exist: {pdf_file_path}")
+            if not os.path.isfile(pdf_file_path):  # Ensure it's not a directory
+                print(f"File is a directory, skipping: {pdf_file_path}")
                 continue
 
             loader = PyMuPDFLoader(pdf_file_path)
@@ -45,6 +45,15 @@ def load_pdf_data(pdf_file_paths):
             print(f"Error loading {pdf_file_path}: {str(e)}")
     return documents
 
+# Function to get all PDF files from a directory
+def get_pdf_files_from_directory(directory):
+    pdf_files = []
+    for file_name in os.listdir(directory):
+        file_path = os.path.join(directory, file_name)
+        if os.path.isfile(file_path) and file_name.endswith(".pdf"):  # Check if it's a file and a PDF
+            pdf_files.append(file_path)
+    return pdf_files
+
 # Function to check if vector data for a PDF exists in the vectorstore using metadata
 def check_existing_vectors(pdf_hash, vectorstore):
     results = vectorstore.similarity_search_with_score(pdf_hash, k=1)
@@ -57,10 +66,17 @@ def retrieve_vectors(pdf_hash, vectorstore):
 # Initialize session-like state for chat history
 chat_history = []
 
-# PDF file to load
-pdf_files = ['RESEARCH PAPER/']
+# Ask the user to provide the directory path for PDFs
+directory_path = 'RESEARCH PAPER/'
 
-# Hash the PDF file
+# Get all PDF files from the provided directory
+pdf_files = get_pdf_files_from_directory(directory_path)
+
+if not pdf_files:
+    print(f"No PDF files found in directory: {directory_path}")
+    exit()
+
+# Hash the first PDF file
 pdf_hash = hash_pdf(pdf_files[0])
 
 # Initialize the text splitter

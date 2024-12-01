@@ -138,7 +138,7 @@ if uploaded_file is not None:
 
     # Combine retriever and question-answering into a single chain
     rag_chain = (
-        RunnablePassthrough.assign(context=contextualized_question | vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 10}) | format_docs)
+        RunnablePassthrough.assign(context=contextualized_question | vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3}) | format_docs)
         | qa_prompt
         | llm
     )
