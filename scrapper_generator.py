@@ -108,4 +108,4 @@ def web_scraper_app():
             st.warning("Please enter a search query.")
 
 if __name__ == "__main__":
-    main()
+    web_scraper_app()

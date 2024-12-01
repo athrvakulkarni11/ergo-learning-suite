@@ -156,4 +156,4 @@ def memory_storer_app():
             st.info("You need to learn something first before generating a summary.")
 
 if __name__ == "__main__":
-    main()
+    memory_storer_app()
