@@ -2,6 +2,7 @@ streamlit
 langchain
 requests
 groq
+bs4
 # sqlite3
 # PyMuPDF  # for loading PDF files
 # hashlib  # for hashing PDF contents

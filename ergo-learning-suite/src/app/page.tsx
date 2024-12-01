@@ -20,7 +20,7 @@ export default function ErgoEnhancedPoster() {
       title: "MCQ Maestro",
       description: "Generate tailored multiple-choice questions for any topic.",
       color: "from-yellow-400 to-orange-500",
-      url: "https://your-streamlit-app-1.com",
+      url: "https://textbook-qna-rag-dvxxsgmv2nknu5sjmyvhyl.streamlit.app/",
     },
     {
       icon: <Globe className="w-20 h-20 text-cyan-300" />,
