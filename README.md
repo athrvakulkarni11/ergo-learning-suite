@@ -1,32 +1,9 @@
-# Textbook-QnA-RAG
-
-This repository contains an implementation of **Retrieval-Augmented Generation (RAG)** for a textbook question-answering application. RAG combines generative models with retrieval mechanisms to provide more informed and contextually relevant outputs, enabling large language models (LLMs) to access updated information from specified documents or databases.
-
-## What is RAG?
-
-**Retrieval-Augmented Generation (RAG)** is a powerful technique that enhances LLMs by integrating external data retrieval into the response generation process. This allows models to utilize real-time or domain-specific knowledge, significantly improving the accuracy and relevance of their responses.
-
-## Implementation Details
-
-This implementation uses the **Ollama Framework** alongside **Mistral** for retrieval generation and **Nomic's embedding tools** for creating embeddings of text data.
-
-
-
-## Getting Started
-
-### Prerequisites
-
-To run this application, ensure you have the following installed:
-
-- Python 3.8>
-- Ollama Framework- Install Ollama From Your Local Browser And Pull the LLM you need
-- Mistral (for retrieval generation)
-- Nomic's embedding tools (for text embedding)
-
-### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/athrvakulkarni11/Textbook-QnA-RAG.git
-   cd Textbook-QnA-RAG
-   python withoutapp.py
+ERGO - AI-Powered Learning Platform
+- Developed a platform with tools for education and memory retention, including an MCQ generator.
+  Link-[https://ergo-learning-suite-dvxxsgmv2nknu5sjmyvhyl.streamlit.app/](url)
+- Built a web scraper to stay updated on the latest advancements in relevant fields.
+  Link-[https://ergo-learning-suite-m8zukhtgmawzyjijzflehy.streamlit.app/](url)
+- Created a ”Memory Vault” to store and review learning materials
+  Link-[https://ergo-learning-suite-h9xbvyjmafgstmrxkfrjkp.streamlit.app/](url)
+- A RAG system for Getting Textbook Accurate answers.
+- Technologies Used: Groq, OLLAMA, Web Scraping, LLAMA3-8b, Mistral, Nomic-Embed-Text
