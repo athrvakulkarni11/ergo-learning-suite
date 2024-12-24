@@ -57,8 +57,8 @@ def retrieve_vectors(pdf_hash, vectorstore):
 # Initialize session-like state for chat history
 chat_history = []
 
-# PDF file to load
-pdf_files = ['RESEARCH PAPER/']
+# PDF file to load 
+pdf_files = ['1003000265.pdf']
 
 # Hash the PDF file
 pdf_hash = hash_pdf(pdf_files[0])

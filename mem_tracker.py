@@ -14,7 +14,7 @@ def init_db():
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS memory (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp TEXT,
+            timestamp TEXT, 
             query TEXT,
             response TEXT,
             content TEXT
