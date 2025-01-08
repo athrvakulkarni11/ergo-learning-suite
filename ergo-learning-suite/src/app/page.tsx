@@ -27,14 +27,14 @@ export default function ErgoEnhancedPoster() {
       title: "Web Insight Engine",
       description: "Scrape and synthesize cutting-edge information on any subject.",
       color: "from-cyan-400 to-blue-500",
-      url: "https://your-streamlit-app-2.com",
+      url: "https://textbook-qna-rag-m8zukhtgmawzyjijzflehy.streamlit.app/",
     },
     {
       icon: <Brain className="w-20 h-20 text-fuchsia-300" />,
       title: "Memory Vault",
       description: "Store, summarize, and recall study materials with ease.",
       color: "from-fuchsia-400 to-purple-500",
-      url: "https://your-streamlit-app-3.com",
+      url: "https://textbook-qna-rag-h9xbvyjmafgstmrxkfrjkp.streamlit.app/",
     },
     {
       icon: <Book className="w-20 h-20 text-emerald-300" />,
