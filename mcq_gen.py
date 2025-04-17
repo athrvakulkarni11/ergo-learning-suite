@@ -1,9 +1,11 @@
 import streamlit as st
 import json
 from groq import Groq
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 # Initialize the Groq client
-API_KEY = "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"  # Replace with your actual API key
+API_KEY = os.getev("API_KEY")#  # Replace with your actual API key
 client = Groq(api_key=API_KEY)
 
 # Function to extract and parse JSON from the Groq response

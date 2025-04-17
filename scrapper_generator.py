@@ -2,9 +2,11 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 from groq import Groq
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 # Initialize the Groq client
-API_KEY = "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"  # Replace with your Groq API Key
+API_KEY = os.getev("API_KEY")#  # Replace with your Groq API Key
 client = Groq(api_key=API_KEY)
 
 # Function: Web scraping
